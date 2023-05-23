@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp1">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/lib/angular.min.js"></script>
+    <script src="/lib/angular-route.min.js"></script>
+    <script>
+        function OnForm(){
+             var Name=document.getElementById("id1").value;
+             var Password=document.MyForm.Password.value;
+             var regex=/^([a-zA-Z0-9\.]+)@([a-zA-Z-]+)\.([a-zA-Z]{2,8})(\.[a-zA-Z])?$/;
+             console.log(Name);
+             console.log(Password);
+             if(Name=="" || Password=="")
+                   return false;
+             else if(regex.test(Name))
+                      
+                        return true;
+            alert("Invalid Email");
+             return false;
+        }
+    </script>
+</head>
+
+<body ng-controller="MyCt">
+    <form method="POST" onsubmit="return OnForm()"  name="MyForm" action="C:\CompleteCssLearn\new2.html" novalidate>
+        <input type="text" name="Name" placeholder="Name" id="id1">
+        <input type="text"name="Password" placeholder="password" class="t1">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

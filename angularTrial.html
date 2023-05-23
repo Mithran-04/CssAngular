@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp1">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/lib/angular.min.js"></script>
+    <script src="/lib/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    
+    <title>Document</title>
+</head>
+<body ng-controller="MyCt">
+    <input type="text" placeholder="search" ng-model="Search" name="Search">
+    <ul>
+        <li ng-repeat="i in data | filter:{Name:Search}">
+            <h1>{{i.Name}}</h1>
+            <h2>{{i.Age}}</h2>
+
+        </li>
+        
+    </ul>
+    <input type="text" placeholder="enter" name="Se1" ng-model="Se1">
+    <div ng-switch="Se1">
+        <div ng-switch-when="Print">
+            <h1>1111111111</h1>
+        </div>
+        <div ng-switch-when="Disp">
+            <h1>2222222222222</h1>
+        </div>
+        <div ng-switch-default>
+            <h1>Default</h1>
+        </div>
+    </div>
+    <my-cp></my-cp>
+    <button ng-click="chg()">Click</button>
+    <h1>{{num}}</h1>
+
+    <!-- <a href="#!form">form</a>
+    <a href="#/">Neww</a>
+    <div ng-view></div> -->
+    <!-- <a href="#!new2">new2</a> -->
+
+    <form name="MyForm" novalidate>
+        <input type="email" name="EMail" ng-model="EMail" placeholder="EMail" required>
+        <span style="color:red" ng-show="MyForm.EMail.$dirty && MyForm.EMail.$invalid ">EMail Invalid</span>
+        <span style="color:red" ng-show="MyForm.EMail.$dirty && MyForm.EMail.$error.required" >Email required</span>
+        <br><br><br><br>
+
+        <input type="password" placeholder="Password" ng-model="Pass" name="Pass" required>
+        <span style="color:red" ng-show="$MyForm.Pass.$dirty && $Myform.Pass.$error.required">Password Required</span>
+        <br><br>
+        <input type="submit">
+    </form>
+
+</body>
+</html>

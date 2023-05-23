@@ -1,0 +1,37 @@
+body{
+   /* background-image: url("NatureImg.jpg"); */
+    /* left to right */
+    background-repeat: no-repeat ;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+h1{
+    background: linear-gradient(to left,skyblue,lightgreen); 
+    border-top-style: dotted;
+    border-bottom-style:double ;
+    border-left-style: double;
+    border-left-color:rgb(13, 242, 13);
+    float:left
+    /* clear:left
+    // It is used in other contentrs to stop floating. */
+    /* removes the content from the default flow and wraps other contents around it */
+    /* margin-right: auto;
+    sticks the content to the left */
+}
+#i1{
+    color:blue;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: cyan dotted underline;
+    font-size: 20px;
+    border-style: dashed solid;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 4px;
+}
+li:nth-child(5n+1){
+    background-color: tomato;
+}
+/* 1 represents offset starting point .  These are pseudo classes- that is a keyword added to a selector that specifies special state of selected elements*/
